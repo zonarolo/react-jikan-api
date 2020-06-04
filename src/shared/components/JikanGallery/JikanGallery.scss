@@ -1,0 +1,26 @@
+.c-jikanGallery{
+  &__item{
+    text-align: center;
+  }
+
+  &__img{
+    height: 330px;
+    width: 225px;
+  }
+  &__img--max{
+    height: 470px;
+    width: 340px;
+  }
+  &__title{
+    position: absolute;
+    bottom: 20px;
+    left: 56px;
+    width: 226px;
+    font-size: 24px;
+    padding: 0.3rem 1rem;
+    text-align: center;
+  }
+  &__title--max{
+    width: 340px;
+  }
+}
