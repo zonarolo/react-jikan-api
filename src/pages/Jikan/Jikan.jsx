@@ -6,36 +6,46 @@ import {JikanSearch} from "../../shared/components/JikanSearch/JikanSearch";
 
 export function Jikan() {
 const [jikans, setJikans] = useState([]);
-const [filteredJikans, setFilteredJikans] = useState([])
+const [categories, setCategories] = useState([]);
 
   useEffect(()=> {
-    axios.get(environment.url).then(res=> {
-        setJikans(res.data.data);
-        setFilteredJikans(res.data.data);
+
+    axios.get(environment.url + 'categories?page[limit]=200').then(res=> {
+        setCategories(res.data.data);
       }
     )
+    axios.get(environment.url + 'anime?page[limit]=19').then(res=> {
+        setJikans(res.data.data);
+      }
+    );
+
+
   }, [])
 // Siempre para el useEffect debes colocar array vacio al final para detener la propagacion del mismo.
 
-  function jikansSearch(filteredValues) {
-    let jikanFilter = [];
-    jikanFilter = jikans.filter( (item) => {
-      if (item.attributes.titles.en_jp !== "" && filteredValues.name !== "") {
-        console.log(item.attributes.titles.en_jp);
-        return item.attributes.titles.en_jp.toLowerCase().includes(filteredValues.name.toLowerCase());
+
+
+  const jikansSearch = (filteredValues) => {
+    const filterUrl = filteredValues.name.length ? '&filter[text]=' + filteredValues.name : '';
+
+    axios.get(environment.url + 'anime?page[limit]=19' + (filteredValues.category !== "" && '&filter[categories]='+filteredValues.category) + filterUrl).then(res=> {
+        setJikans(res.data.data);
       }
-      if (filteredValues.name == "") return true;
-    });
-    console.log(jikanFilter);
-    setFilteredJikans(jikanFilter);
+    )
+
   }
 
+  // const animeSearch = (filterValues) => {
+  //   console.log(filterValues)
+  //   axios.get(environment.url + 'anime?page[limit]=19' + (filterValues.category !== "" && '&filter[categories]='+filterValues.category) + (filterValues.name !== "" ? '&filter[text]=' + filterValues.name : "")).then(res => {
+  //     setAnimes(res.data.data)
+  //   });
+  // }
 
   return (
     <div className="justify-content-center">
-      <img src="https://la-space.sfo2.cdn.digitaloceanspaces.com/main-site/logo_transparente.png" alt="" className="b-img-primary"/>
-      <JikanSearch onSearch={jikansSearch}/>
-      <JikanGallery jikans={filteredJikans}/>
+      <JikanSearch onSearch={jikansSearch} categories={categories}/>
+      <JikanGallery jikans={jikans}/>
     </div>
   );
 }

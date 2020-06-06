@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/theme/theme';
 import { GlobalStyles } from './styles/theme/global';
 import {ThemeContext} from "./shared/contexts/Theme/ThemeContext";
+import {Footer} from "./shared/components/Footer/Footer";
 
 
 function App() {
@@ -22,13 +23,14 @@ function App() {
             <Menu />
             <GlobalStyles />
             <Switch>
-              <Route path="/jikan">
+              <Route path="/animes">
                 <Jikan />
               </Route>
               <Route path="/">
                 <Home/>
               </Route>
             </Switch>
+            <Footer />
           </Router>
         </ThemeProvider>
       </ThemeContext.Provider>
