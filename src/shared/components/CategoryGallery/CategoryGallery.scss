@@ -1,0 +1,67 @@
+//.c-jikansGallery {
+//  &__item-container {
+//    text-decoration: none;
+//    &:hover {
+//      .c-anime-gallery__img {
+//        transform: scale3d(1.175,1.1,1.1);
+//      }
+//    }
+//  }
+//  &__item {
+//    height: 496px;
+//    margin: 64px auto;
+//    text-align: center;
+//    cursor: pointer;
+//    &--max {
+//      height: 576px;
+//      //width: 100%;
+//    }
+//  }
+//  &__img {
+//    transition: transform .5s ease-in-out;
+//    height: 100%;
+//    width: 400px;
+//    border-radius: 15px;
+//  }
+//  &__caption {
+//    color: #FFFFFF;
+//    font-size: 24px;
+//    margin-top: 16px;
+//    font-family: "Arial";
+//    padding: 16px;
+//    background-color: rgba(0, 0, 0, 0.3);
+//    border-radius: 10px;
+//  }
+//}
+//.b-primereact-paginator {
+//  margin-top: 104px;
+//  &.p-paginator {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    background-color: transparent;
+//    border-width: 0;
+//    .p-paginator-pages {
+//      padding: 1rem;
+//      display: inline-flex;
+//      align-items: center;
+//    }
+//    .p-paginator-page {
+//      margin: 0 5px !important;
+//      border-radius: 3px !important;
+//    }
+//    .p-paginator-next, .p-paginator-last, .p-paginator-first, .p-paginator-prev {
+//      padding: 1.2rem;
+//      border-radius: 3px;
+//    }
+//    .p-paginator-next{
+//      margin-left: 0.25rem;
+//    }
+//    .p-paginator-prev{
+//      margin-right: 0.25rem;
+//    }
+//    .p-disabled{
+//      opacity: .5;
+//    }
+//  }
+//}

@@ -1,7 +1,6 @@
 .c-menu {
   display: flex;
   justify-content: flex-end;
-
   &__link {
     color: white;
     font-size: 16px;
@@ -12,5 +11,4 @@
     min-width: 8rem;
     text-align: center;
   }
-
 }

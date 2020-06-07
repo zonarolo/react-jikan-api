@@ -9,10 +9,11 @@ import { lightTheme, darkTheme } from './styles/theme/theme';
 import { GlobalStyles } from './styles/theme/global';
 import {ThemeContext} from "./shared/contexts/Theme/ThemeContext";
 import {Footer} from "./shared/components/Footer/Footer";
-
+import {Newsletter} from "./pages/Newsletter/Newsletter";
+import {Sponsors} from "./pages/Sponsors/Sponsors";
+import {Categories} from "./pages/Categories/Categories";
 
 function App() {
-
   const [theme, setTheme] = useState("Dark Mode");
 
   return (
@@ -23,8 +24,20 @@ function App() {
             <Menu />
             <GlobalStyles />
             <Switch>
+              <Route path="/animes/:category">
+                <Jikan />
+              </Route>
               <Route path="/animes">
                 <Jikan />
+              </Route>
+              <Route path="/newsletter">
+                <Newsletter/>
+              </Route>
+              <Route path="/sponsors">
+                <Sponsors/>
+              </Route>
+              <Route path="/categories">
+                <Categories />
               </Route>
               <Route path="/">
                 <Home/>

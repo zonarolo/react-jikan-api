@@ -1,13 +1,12 @@
 import React from 'react';
 import './Footer.scss';
 
-
 export function Footer(){
 
   return(
     <footer className="c-footer">
       <div className="c-footer__img-square">
-        <div className="c-footer__img"><img src="https://la-space.sfo2.cdn.digitaloceanspaces.com/main-site/logo_transparente.png" alt=""
+        <div className="c-footer__img"><img src="https://www.kindpng.com/picc/b/719/7190125.png" alt="logo"
                 className="b-img-primary"/></div>
         <div className="c-footer__square-content">
           <div className="c-footer__square"><a href="http://www.youtube.com" className="c-footer__link"><i className="fab fa-youtube c-footer__i fa-2x"></i></a></div>

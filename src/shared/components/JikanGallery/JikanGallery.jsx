@@ -9,13 +9,9 @@ export function JikanGallery(props) {
     <div className="c-jikanGallery">
       <div className="row">
         {props.jikans.map((item,index)=>
-
           <div className={index < 3 ? "col-lg-4 col-sm-6 ": "col-lg-3 col-md-4"} key={index}>
             <figure className="c-jikanGallery__item" >
-              {item && item.attributes && item.attributes.posterImage &&
-
-              <a href={"https://kitsu.io/anime/" + item.id}>
-
+              {item && item.attributes && item.attributes.posterImage && <a href={"https://kitsu.io/anime/" + item.id}>
                 <img className={index < 3 ? "c-jikanGallery__img" +
                 " c-jikanGallery__img--max" : "c-jikanGallery__img"}
                       src={item.attributes.posterImage.original} alt={item.attributes.titles}/></a>}

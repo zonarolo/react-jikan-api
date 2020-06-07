@@ -1,21 +1,20 @@
 import React, {useEffect, useState} from "react";
-import './Home.scss';
-import {CarouselHome} from "../../shared/components/Carousel/Carousel";
 import {environment} from "../../environments/environment";
 import axios from 'axios';
+import {CompNewsletter} from "../../shared/components/CompNewsletter/CompNewsletter"
 
 
-export function Home() {
-  const [trendingJikans, setTrendingJikans] = useState([]);
+export function Newsletter() {
+  const [newsletter, setNewsletter] = useState([]);
 
   useEffect( () => {
-    axios.get(environment.url + 'trending/anime').then(res => {
-      setTrendingJikans(res.data.data);
+    axios.get(environment.url + 'anime?sort=-updatedAt').then(res => {
+      setNewsletter(res.data.data);
     })
   })
   return (
     <div className="justify-content-center">
-      < CarouselHome trending={trendingJikans} />
+      <CompNewsletter news={newsletter} />
     </div>
   )
 }

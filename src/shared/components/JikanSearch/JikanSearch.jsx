@@ -12,20 +12,14 @@ export function JikanSearch(props) {
   return(
     <div className="c-jikanSearch">
       <form onSubmit={handleSubmit(onSubmit)} className="c-jikanSearch__form">
-
-
-          <input className="c-jikanSearch__input" name="name" placeholder="Name" ref={register}  />
-
+        <input className="c-jikanSearch__input" name="name" placeholder="Name" ref={register}  />
         <select className="c-jikanSearch__input" name="category" ref={register}>
-
           <option value="">Categoria</option>
           {props.categories && props.categories.map((item, index) =>
             <option value={item.attributes.slug} key={index}>{item.attributes.title}</option>
           )};
         </select>
-
         {errors.exampleRequired && <span>This field is required</span>}
-
         <input className="c-jikanSearch__submit" type="submit" />
       </form>
     </div>
