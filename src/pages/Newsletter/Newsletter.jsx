@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 export function Home() {
-const [trendingJikans, setTrendingJikans] = useState([]);
+  const [trendingJikans, setTrendingJikans] = useState([]);
 
   useEffect( () => {
     axios.get(environment.url + 'trending/anime').then(res => {

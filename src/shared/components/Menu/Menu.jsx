@@ -16,6 +16,7 @@ export function Menu() {
 
       <Link className="c-menu__link" to="/">Home</Link>
       <Link className="c-menu__link" to="/animes">Animes</Link>
+      <Link className="c-menu__link" to="/newsletter">Newsletter</Link>
       <Link className="c-menu__link" onClick={ () => switchMode()}>
         {theme === "Dark Mode" ? "Light Mode" : "Dark Mode"}
       </Link>

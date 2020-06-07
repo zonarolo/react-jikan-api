@@ -1,0 +1,24 @@
+.carousel-root{
+  margin-top: 20px;
+  .control-dots{
+    margin: 0;
+    padding: 0;
+  }
+  .control-arrow{
+    width: 5vw;
+    margin: 0 150px;
+  }
+  .slider-wrapper{
+    width: 45%;
+    .slider{
+      .slide{
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.carousel .thumbs-wrapper{
+  margin: 0;
+  display: none;
+}

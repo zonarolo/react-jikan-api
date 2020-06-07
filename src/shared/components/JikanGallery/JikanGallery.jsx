@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import './JikanGallery.scss';
 import {FigCaption} from "../../../styles/elements/figcaption.elements";
-
+import {Paginator} from 'primereact/paginator';
 
 export function JikanGallery(props) {
-console.log(props.jikans);
   return (
 
     <div className="c-jikanGallery">
@@ -19,12 +18,14 @@ console.log(props.jikans);
 
                 <img className={index < 3 ? "c-jikanGallery__img" +
                 " c-jikanGallery__img--max" : "c-jikanGallery__img"}
-                      src={item.attributes.posterImage.original}/></a>}
+                      src={item.attributes.posterImage.original} alt={item.attributes.titles}/></a>}
               {item && item.attributes && item.attributes.titles && <FigCaption className={index < 3 ? "c-jikanGallery__title c-jikanGallery__title--max":"c-jikanGallery__title"}>{item.attributes.titles.en_jp}</FigCaption>}
             </figure>
           </div>
         )}
       </div>
+
+      <Paginator className="b-primereact-paginator" first={props.paginationInfo.first} rows={props.paginationInfo.rows} totalRecords={props.totalRecords} onPageChange={props.fnChangePage}/>
     </div>
 
   )

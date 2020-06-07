@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.scss';
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Home} from "./pages/Home/Home";
 import {Jikan} from "./pages/Jikan/Jikan";
 import {Menu} from "./shared/components/Menu/Menu";

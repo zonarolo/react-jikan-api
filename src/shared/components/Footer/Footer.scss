@@ -1,5 +1,6 @@
 .c-footer{
   &__img-square{
+    height: 50px;
     display: flex;
     justify-content: space-between;
   }
@@ -30,5 +31,11 @@
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
+  }
+  &__link{
+    color: white;
+  }
+  &__link:hover{
+    color: blue;
   }
 }

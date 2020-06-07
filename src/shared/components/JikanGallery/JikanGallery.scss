@@ -24,3 +24,35 @@
     width: 340px;
   }
 }
+.b-primereact-paginator {
+  margin-top: 104px;
+  &.p-paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-width: 0;
+    .p-paginator-pages {
+      padding: 1rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    .p-paginator-page {
+      margin: 0 5px !important;
+      border-radius: 3px !important;
+    }
+    .p-paginator-next, .p-paginator-last, .p-paginator-first, .p-paginator-prev {
+      padding: 1.2rem;
+      border-radius: 3px;
+    }
+    .p-paginator-next{
+      margin-left: 0.25rem;
+    }
+    .p-paginator-prev{
+      margin-right: 0.25rem;
+    }
+    .p-disabled{
+      opacity: .5;
+    }
+  }
+}

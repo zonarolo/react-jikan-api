@@ -3,7 +3,7 @@ import './JikanSearch.scss';
 import { useForm } from "react-hook-form";
 
 export function JikanSearch(props) {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data) => {
     props.onSearch(data);
@@ -20,7 +20,7 @@ export function JikanSearch(props) {
 
           <option value="">Categoria</option>
           {props.categories && props.categories.map((item, index) =>
-            <option value={item.attributes.slug}>{item.attributes.title}</option>
+            <option value={item.attributes.slug} key={index}>{item.attributes.title}</option>
           )};
         </select>
 
