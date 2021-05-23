@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-jikan-api/static/css/main.a1648652.chunk.css",
+    "main.js": "/react-jikan-api/static/js/main.dc8fb17c.chunk.js",
+    "main.js.map": "/react-jikan-api/static/js/main.dc8fb17c.chunk.js.map",
+    "runtime-main.js": "/react-jikan-api/static/js/runtime-main.a14cec5a.js",
+    "runtime-main.js.map": "/react-jikan-api/static/js/runtime-main.a14cec5a.js.map",
+    "static/css/2.69b2cdbe.chunk.css": "/react-jikan-api/static/css/2.69b2cdbe.chunk.css",
+    "static/js/2.121b48c9.chunk.js": "/react-jikan-api/static/js/2.121b48c9.chunk.js",
+    "static/js/2.121b48c9.chunk.js.map": "/react-jikan-api/static/js/2.121b48c9.chunk.js.map",
+    "index.html": "/react-jikan-api/index.html",
+    "precache-manifest.c93243f7f1ef3a91eae0eb34060ac15f.js": "/react-jikan-api/precache-manifest.c93243f7f1ef3a91eae0eb34060ac15f.js",
+    "service-worker.js": "/react-jikan-api/service-worker.js",
+    "static/css/2.69b2cdbe.chunk.css.map": "/react-jikan-api/static/css/2.69b2cdbe.chunk.css.map",
+    "static/css/main.a1648652.chunk.css.map": "/react-jikan-api/static/css/main.a1648652.chunk.css.map",
+    "static/js/2.121b48c9.chunk.js.LICENSE.txt": "/react-jikan-api/static/js/2.121b48c9.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/react-jikan-api/static/media/primeicons.e285f4aa.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a14cec5a.js",
+    "static/css/2.69b2cdbe.chunk.css",
+    "static/js/2.121b48c9.chunk.js",
+    "static/css/main.a1648652.chunk.css",
+    "static/js/main.dc8fb17c.chunk.js"
+  ]
+}
