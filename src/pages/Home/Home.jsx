@@ -12,7 +12,7 @@ const [trendingJikans, setTrendingJikans] = useState([]);
     axios.get(environment.url + 'trending/anime').then(res => {
       setTrendingJikans(res.data.data);
     })
-  })
+  }, [])
   return (
     <div className="justify-content-center">
       < CarouselHome trending={trendingJikans} />

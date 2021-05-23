@@ -11,7 +11,7 @@ export function Newsletter() {
     axios.get(environment.url + 'anime?sort=-updatedAt').then(res => {
       setNewsletter(res.data.data);
     })
-  })
+  }, [])
   return (
     <div className="justify-content-center">
       <CompNewsletter news={newsletter} />
